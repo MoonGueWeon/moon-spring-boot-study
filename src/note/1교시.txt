@@ -1,0 +1,22 @@
+
+1 교시-소프트웨어 설치하기
+
+
+1. Oracle JDK 1.8 설치
+https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+
+2. STS 툴 설치 4.9.0 - WINDOWS 64-BIT
+https://spring.io/tools
+
+3. MySQL 5.7 설치
+https://dev.mysql.com/downloads/mysql/
+https://dev.mysql.com/downloads/
+
+4. PostgreSQL 13.1 설치
+https://www.postgresql.org/download/
+
+5. Try DBeaver trial 설치
+https://dbeaver.com/trial/
+
+6. 개발자용 개발환경 32bit/64bit(Implementation Tool) Version 3.9.0 설치
+https://www.egovframe.go.kr
