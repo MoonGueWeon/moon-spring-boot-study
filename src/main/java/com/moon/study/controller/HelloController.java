@@ -17,7 +17,7 @@ public class HelloController {
 		return "Hello 스프링부트...!";
 	}
 
-	@RequestMapping(value = "/hello/{path}", method = RequestMethod.GET)
+	@RequestMapping("/hello/{path}")
 	public String helloPath(@PathVariable String path) {
 		return "Hello "+path+" 스프링부트...!";
 	}
