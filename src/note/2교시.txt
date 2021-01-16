@@ -71,6 +71,7 @@ INSERT INTO `moondb`.`TB_BOARD` (`board_id`, `board_title`, `board_cont`, `creat
 INSERT INTO `moondb`.`TB_BOARD` (`board_id`, `board_title`, `board_cont`, `create_user`, `create_date`) VALUES ('3', 'CCCC', 'C내용', 'moon', now());
 
 
+
 1. myBatits sql mapper 생성하기
 
 
