@@ -39,3 +39,4 @@ CREATE TABLE moondb.TB_NOTICE (
 INSERT INTO moondb.TB_BOARD (board_id, board_title, board_cont, create_user, create_date) VALUES ('1', 'AAAA', 'A내용', 'moon', now());
 INSERT INTO moondb.TB_BOARD (board_id, board_title, board_cont, create_user, create_date) VALUES ('2', 'BBBB', 'B내용', 'moon', now());
 INSERT INTO moondb.TB_BOARD (board_id, board_title, board_cont, create_user, create_date) VALUES ('3', 'CCCC', 'C내용', 'moon', now());
+
