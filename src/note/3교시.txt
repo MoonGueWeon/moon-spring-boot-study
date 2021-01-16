@@ -1,0 +1,41 @@
+
+
+1. postgres DB 생성하기
+
+create user moon password ‘moon00’ superuser;
+create database monody owner moon;
+create database monody owner moon tablespace=ts_moondb;
+drop database monodb;
+create tablespace ts_moondb owner moon location ‘/home/postgres/tablespaces/ts_moondb’;
+drop tablespace ts_moondb;
+alter tablespace ts_moondb to ts_moon2db;
+
+select * from pb_user;
+select * from pb_database;
+select * from pb_tables;
+
+
+
+1. 테이블 생성하기
+
+CREATE TABLE moondb.TB_BOARD (
+  board_id INT NOT NULL AUTO_INCREMENT COMMENT '게시판_ID',
+  board_title VARCHAR(450) NULL COMMENT '게시판_제목',
+  board_cont VARCHAR(450) NULL COMMENT '게시판_내용',
+  create_user VARCHAR(450) NULL COMMENT '등록_사용자',
+  create_date DATETIME NULL COMMENT '등록_일자',
+  PRIMARY KEY (board_id));
+
+CREATE TABLE moondb.TB_NOTICE (
+  board_id INT NOT NULL COMMENT '게시판_ID',
+  notice_id INT NOT NULL AUTO_INCREMENT COMMENT '게시물_ID',
+  notice_title VARCHAR(45) NULL COMMENT '게시물_제목',
+  notice_cont VARCHAR(45) NULL COMMENT '게시물_내용',
+  create_user VARCHAR(45) NULL COMMENT '등록_사용자',
+  create_date DATETIME NULL COMMENT '등록_일자',
+  PRIMARY KEY (board_id, notice_id),
+  UNIQUE INDEX notice_id_UNIQUE (notice_id ASC) VISIBLE);
+
+INSERT INTO moondb.TB_BOARD (board_id, board_title, board_cont, create_user, create_date) VALUES ('1', 'AAAA', 'A내용', 'moon', now());
+INSERT INTO moondb.TB_BOARD (board_id, board_title, board_cont, create_user, create_date) VALUES ('2', 'BBBB', 'B내용', 'moon', now());
+INSERT INTO moondb.TB_BOARD (board_id, board_title, board_cont, create_user, create_date) VALUES ('3', 'CCCC', 'C내용', 'moon', now());
