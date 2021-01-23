@@ -2,16 +2,25 @@ package com.moon.study.controller;
 
 import java.util.HashMap;
 
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
 
+    @GetMapping({"/", "/h"})
+    public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
+        model.addAttribute("name", name);
+        return "hello";
+    }
+    
 	@RequestMapping("/hello")
 	public String hello() {
 		return "Hello 스프링부트...!";
